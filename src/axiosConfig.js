@@ -1,27 +1,19 @@
-import axios from "axios";
+import axios from 'axios';
 
-const axiosInstance = axios.create({
-  baseURL: "http://localhost:5163/api", // Remplacez par l'URL de base de votre API
-  // Vous pouvez ajouter des en-têtes ou des configurations globales ici
+// Create an instance for authentication
+const authInstance = axios.create({
+  baseURL: 'http://localhost:5163/api',
+  headers: {
+    'Content-Type': 'application/json',
+  },
 });
 
-// Vous pouvez également ajouter des intercepteurs pour les requêtes et les réponses
-axiosInstance.interceptors.request.use(
-  config => {
-    // Ajouter des en-têtes ou des configurations spécifiques aux requêtes
-    return config;
+// Create an instance for period management
+const periodeInstance = axios.create({
+  baseURL: 'http://localhost:5191/api',
+  headers: {
+    'Content-Type': 'application/json',
   },
-  error => {
-    return Promise.reject(error);
-  }
-);
+});
 
-axiosInstance.interceptors.response.use(
-  response => response,
-  error => {
-    // Gérer les erreurs globalement
-    return Promise.reject(error);
-  }
-);
-
-export default axiosInstance;
+export { authInstance, periodeInstance };

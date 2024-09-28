@@ -1,68 +1,19 @@
-// import React, { useEffect, useState } from 'react';
-// import axios from 'axios';
-// import './App.css';
-
-// function App() {
-//   const [message, setMessage] = useState('');
-
-//   useEffect(() => {
-//     axios.get('http://localhost:5273/api/helloworld')
-//       .then(response => {
-//         setMessage(response.data);
-//       })
-//       .catch(error => {
-//         console.error('Il y a eu une erreur!', error);
-//       });
-//   }, []);
-
-//   return (
-//     <div className="App">
-//       <h1>{message}</h1>
-//     </div>
-//   );
-// }
-
-// export default App;
-
-// import React, { useState, useEffect } from 'react';
-// import axios from 'axios';
-// function App()
-// {
-//     const [type_emp, setType_emp] = useState([]);
-//     const [error, setError] = useState(null);
-
-//     useEffect(() => {
-//         axios.get('http://localhost:5228/api/Type_emp')
-//         .then(response => {
-//             setType_emp(response.data);
-//         })
-//         .catch(err=> {
-//             setError(err.message);
-//         });
-//     }, []);
-
-//     return (
-//         <div>
-//             <h1>Liste des type d'employé</h1>
-//             {error && <p>Erreur : {error}</p>}
-//             <ul>
-//                 {type_emp.map(type_emp => (
-//                     <li key={type_emp.type_emp_id}>{type_emp.type_emp_nom}</li>
-//                 ))}
-//             </ul>
-//         </div>
-//     );
-// }
-
-// export default App;
-
-
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
-// Chakra imports
 import { ChakraProvider } from "@chakra-ui/react";
-// pages and routes
-import Login from "./views/Auth/Login"; // Ensure this path is correct
+
+// Import pages
+import Login from "./views/Auth/Login";
+import Profil from "./views/Dashboard/profil/Profil";
+import Rh from "./views/Dashboard/rh/Home";
+import Evaluation from './views/Dashboard/rh/evaluation/Evaluation';
+import CollaborateurListe from './views/Dashboard/rh/collaborateur/Liste';
+
+
+import Collaborateur from "./views/Dashboard/collaborateur/Home";
+
+
+import Superieur from "./views/Dashboard/superieur/Home";
 
 function App() {
   return (
@@ -71,12 +22,22 @@ function App() {
         <Routes>
           {/* Define routes */}
           <Route path="/login" element={<Login />} />
-          {/* Redirect to login by default */}
           <Route path="/" element={<Navigate to="/login" />} />
+          <Route path="/dashboard/profil" element={<Profil />} />
+
+          {/* rh */}
+          <Route path="/dashboard/rh" element={<Rh />} />
+          <Route path="/rh/evaluation" element={<Evaluation />} />
+          <Route path="/rh/collaborateur/liste" element={<CollaborateurListe />} />
+
+          {/* collab */}
+          <Route path="/dashboard/collaborateur" element={<Collaborateur />} />
+
+          {/* sup */}
+          <Route path="/dashboard/superieur" element={<Superieur />} />
         </Routes>
       </Router>
     </ChakraProvider>
   );
 }
-
 export default App;
