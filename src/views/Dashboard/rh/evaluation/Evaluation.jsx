@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import HeaderRH from 'components/header/HeaderRh';
 import Footer from 'components/footer/Footer';
 import ListeEvaluation from './ListeEvaluation';
-import { periodeInstance } from '../../../../axiosConfig';
-import '../../../../assets/vendors/mdi/css/materialdesignicons.min.css';
-import '../../../../assets/vendors/base/vendor.bundle.base.css';
-import '../../../../assets/vendors/select2/select2.min.css';
-import '../../../../assets/vendors/select2-bootstrap-theme/select2-bootstrap.min.css';
-import '../../../../assets/css/style.css';
+import { periodeInstance } from 'axiosConfig';
+import 'assets/vendors/mdi/css/materialdesignicons.min.css';
+import 'assets/vendors/base/vendor.bundle.base.css';
+import 'assets/vendors/select2/select2.min.css';
+import 'assets/vendors/select2-bootstrap-theme/select2-bootstrap.min.css';
+import 'assets/css/style.css';
 
 const Evaluation = () => {
   const [formData, setFormData] = useState({

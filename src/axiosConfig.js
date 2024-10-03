@@ -16,4 +16,13 @@ const periodeInstance = axios.create({
   },
 });
 
-export { authInstance, periodeInstance };
+
+// Create an instance for formulaire management
+const formulaireInstance = axios.create({
+  baseURL: 'http://localhost:5166/api',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
+
+export { authInstance, periodeInstance, formulaireInstance };

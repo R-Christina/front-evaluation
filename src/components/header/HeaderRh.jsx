@@ -173,10 +173,10 @@ const HeaderRh = () => {
                 </button>
               </li>
               <li className="nav-item dropdown d-lg-flex d-none">
-                <a className="dropdown-toggle show-dropdown-arrow btn btn-inverse-primary btn-sm" id="nreportDropdown" href="#" data-bs-toggle="dropdown" > {" "}  Reports
+                <a className="dropdown-toggle show-dropdown-arrow btn btn-inverse-primary btn-sm" id="nreportDropdown" href="#" data-bs-toggle="dropdown" > {" "}  Exportation
                 </a>
                 <div className="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="nreportDropdown" >
-                  <p className="mb-0 font-weight-medium float-left dropdown-header"> Reports </p>
+                  <p className="mb-0 font-weight-medium float-left dropdown-header"> Exportation </p>
                   <a className="dropdown-item" href="#">
                     <i className="mdi mdi-file-pdf text-primary"></i> Pdf
                   </a>
@@ -190,7 +190,7 @@ const HeaderRh = () => {
                   type="button"
                   className="btn btn-inverse-primary btn-sm"
                 >
-                  Settings
+                  Paramètres
                 </button>
               </li>
               <li className="nav-item nav-profile dropdown">
@@ -205,7 +205,7 @@ const HeaderRh = () => {
                     <i className="mdi mdi-logout text-primary"></i> Logout
                   </a>
                 </div>
-              </li>
+              </li> 
               <div className="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
               <a className="navbar-brand brand-logo" href="index.html">
                 <img
@@ -249,7 +249,7 @@ const HeaderRh = () => {
               <div className="submenu">
                 <ul>
                   <li className="nav-item">
-                    <a className="nav-link" href="pages/ui-features/buttons.html" > Fiche Cadre </a>
+                    <Link className="nav-link" to="/rh/formulaire/ficheCadre">Fiche Cadre</Link>
                   </li>
                   <li className="nav-item">
                     <a className="nav-link" href="pages/ui-features/dropdowns.html" > Fiche Non Cadre </a>

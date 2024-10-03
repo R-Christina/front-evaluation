@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { periodeInstance } from '../../../../axiosConfig'; // Adjust the path as needed
+import { periodeInstance } from 'axiosConfig'; // Adjust the path as needed
 
 const ListeEvaluation = ({ isDataUpdated }) => {
   const [evaluations, setEvaluations] = useState([]);

@@ -5,13 +5,14 @@ import { ChakraProvider } from "@chakra-ui/react";
 // Import pages
 import Login from "./views/Auth/Login";
 import Profil from "./views/Dashboard/profil/Profil";
+
 import Rh from "./views/Dashboard/rh/Home";
 import Evaluation from './views/Dashboard/rh/evaluation/Evaluation';
 import CollaborateurListe from './views/Dashboard/rh/collaborateur/Liste';
-
+import FicheCadre from './views/Dashboard/rh/formualire/cadre/FicheCadre';
 
 import Collaborateur from "./views/Dashboard/collaborateur/Home";
-
+import MatriceCadre from './views/Dashboard/rh/formualire/cadre/MatriceCadre';
 
 import Superieur from "./views/Dashboard/superieur/Home";
 
@@ -29,6 +30,12 @@ function App() {
           <Route path="/dashboard/rh" element={<Rh />} />
           <Route path="/rh/evaluation" element={<Evaluation />} />
           <Route path="/rh/collaborateur/liste" element={<CollaborateurListe />} />
+          <Route path="/rh/formulaire/ficheCadre" element={<FicheCadre />} />
+          <Route path="/rh/formulaire/matriceCadre" element={<MatriceCadre />} />
+          <Route path="/matriculecadre" element={<MatriceCadre />} />
+
+
+        
 
           {/* collab */}
           <Route path="/dashboard/collaborateur" element={<Collaborateur />} />
