@@ -25,4 +25,11 @@ const formulaireInstance = axios.create({
   },
 });
 
-export { authInstance, periodeInstance, formulaireInstance };
+const collabInstance = axios.create({
+  baseURL: 'http://localhost:5051/api',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
+
+export { authInstance, periodeInstance, formulaireInstance, collabInstance };

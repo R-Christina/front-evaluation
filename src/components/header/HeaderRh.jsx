@@ -165,12 +165,20 @@ const HeaderRh = () => {
             </ul>
             <ul className="navbar-nav navbar-nav-right">
               <li className="nav-item dropdown d-lg-flex d-none">
-                <button
-                  type="button"
-                  className="btn btn-inverse-primary btn-sm"
-                >
-                  Product
-                </button>
+                  <a className="dropdown-toggle show-dropdown-arrow btn btn-inverse-primary btn-sm" id="nreportDropdown" href="#" data-bs-toggle="dropdown" > {" "}  Paramètre
+                  </a>
+                  <div className="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="nreportDropdown" >
+                    <p className="mb-0 font-weight-medium float-left dropdown-header"> Paramètre </p>
+                    <a className="dropdown-item" href="/rh/parametre/dir">
+                      <i className="mdi mdi-view-agenda text-primary"></i> Direction 
+                    </a>
+                    <a className="dropdown-item" href="/rh/parametre/dept">
+                      <i className="mdi mdi-view-grid text-primary"></i> Département
+                    </a>
+                    <a className="dropdown-item" href="/rh/parametre/service">
+                      <i className="mdi mdi-view-module text-primary"></i> Service
+                    </a>
+                  </div>
               </li>
               <li className="nav-item dropdown d-lg-flex d-none">
                 <a className="dropdown-toggle show-dropdown-arrow btn btn-inverse-primary btn-sm" id="nreportDropdown" href="#" data-bs-toggle="dropdown" > {" "}  Exportation
@@ -231,7 +239,7 @@ const HeaderRh = () => {
           <ul className="nav page-navigation">
             <li className="nav-item">
               <a className="nav-link" href="index.html">
-                <i className="mdi mdi-file-document-box menu-icon"></i>
+                <i className="mdi mdi-view-dashboard menu-icon"></i>
                 <span className="menu-title">Tableau de bord</span>
               </a>
             </li>
@@ -265,6 +273,9 @@ const HeaderRh = () => {
               </a>
               <div className="submenu">
                 <ul>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/rh/collaborateur/ajout">Ajout collaborateurs</Link>
+                  </li>
                   <li className="nav-item">
                     <Link className="nav-link" to="/rh/collaborateur/liste">Liste des collaborateurs</Link>
                   </li>

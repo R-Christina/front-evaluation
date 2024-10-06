@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import HeaderRH from "components/header/HeaderRh";
 import Footer from "components/footer/Footer";
 import { formulaireInstance } from "axiosConfig";
+import MatriceCadreBody from "./MatriceCadreBody";
+
 
 import "assets/css/style.css";
 import "assets/vendors/mdi/css/materialdesignicons.min.css";
@@ -171,6 +173,7 @@ function MatriceCadre() {
           </div>
         </div>
       </div>
+
       <Footer />
     </div>
   );
