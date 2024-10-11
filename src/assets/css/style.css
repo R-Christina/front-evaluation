@@ -8968,7 +8968,7 @@ tfoot,
 tr,
 td,
 th {
-  border-color: inherit;
+  border-color: gray;
   border-style: solid;
   border-width: 0;
 }
@@ -16781,6 +16781,12 @@ fieldset:disabled .btn {
   background-image: var(--bs-gradient) !important;
 }
 
+.light-background {
+  background-color: gray; /* Couleur de fond gris clair */
+  padding: 20px; /* Ajout de padding pour un meilleur espacement */
+  border-radius: 5px; /* Coins arrondis */
+}
+
 .user-select-all {
   user-select: all !important;
 }
@@ -24196,74 +24202,38 @@ dl li {
 
 /* new fiche */
 .docs-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colonnes de taille égale */
+  gap: 20px; /* Espacement entre les cartes */
 }
 
-.doc-card {
-  margin-top: 10px;
-  background-color: #fff;
-  border-radius: 5px;
-  width: calc(16.66% - 20px); /* 100% / 6 cartes = 16.66%, ajustez l'espacement */
-  text-align: center;
-  cursor: pointer;
-  transition: border 0.3s ease;
-  border: 1px solid lightgray; /* Bordure par défaut */
+.docs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+  gap: 20px;
 }
 
-.doc-card:hover {
-  border-color: blue; /* Change border color on hover */
-}
-
-.doc-card a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.doc-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  object-fit: cover;
-}
-
-.new-doc-card {
-  margin-top: 10px;
+.new-doc-card, .doc-card {
+  background-color: #f9f9f9; /* Optionnel : pour garder une apparence similaire */
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  border: 2px dashed #ccc;
-  padding: 58px;
-  height: auto;
+  align-items: center;
+  border: 1px solid #ddd;
+  height: 100%; /* Assure une hauteur égale */
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .doc-card {
-      width: calc(50% - 20px);
-  }
-}
-
-@media (max-width: 480px) {
-  .doc-card {
-      width: 100%;
-  }
+.new-doc-card:hover, .doc-card:hover {
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .doc-title {
-  display: flex; 
-  align-items: center; 
-  justify-content: space-between; 
-  padding: 20px; 
-  background-color: lightgray; 
-  color: black; 
-}
-
-.doc-title p {
-  margin: 0;
-  flex-grow: 1; 
+  position: absolute;
+  top: 10px; /* Ajustez la distance par rapport au haut */
+  right: 10px; /* Alignez à droite */
+  cursor: pointer;
 }
 
 /* apercue */
@@ -24286,30 +24256,30 @@ dl li {
 
 
 .border {
-  border: 1px solid #ddd; 
+  border: 1px solid black; 
   border-radius: 8px; 
-  background-color: #f9f9f9; 
+  background-color: white; 
 }
 
-.table {
+.tablee {
   width: 100%; /* Prend toute la largeur disponible */
   border-collapse: collapse; /* Supprime l'espace entre les cellules */
   margin-top: 10px; /* Marge au-dessus du tableau */
 }
 
-.table th,
-.table td {
+.tablee th,
+.tablee td {
   padding: 10px; /* Padding des cellules */
   text-align: left; /* Alignement du texte à gauche */
   border-bottom: 1px solid #ddd; /* Ligne de séparation entre les lignes */
 }
 
-.table th {
-  background-color: #c5e5c4;/* Couleur de fond des en-têtes */
+.tablee th {
+  background-color: #17c814;/* Couleur de fond des en-têtes */
   color: black; /* Couleur du texte des en-têtes */
 }
 
-.table tr:hover {
+.tablee tr:hover {
   background-color: #f1f1f1; /* Couleur de fond lors du survol des lignes */
 }
 
@@ -24317,3 +24287,5 @@ dl li {
   text-align: center; /* Alignement centré pour le message vide */
   font-style: italic; /* Italique pour le texte vide */
 }
+
+

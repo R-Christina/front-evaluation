@@ -1,10 +1,11 @@
 import React from "react";
-import "../../assets/css/style.css";
-import "../../assets/vendors/mdi/css/materialdesignicons.min.css";
-import "../../assets/vendors/base/vendor.bundle.base.css";
+import { Link } from 'react-router-dom';
+import "assets/css/style.css";
+import "assets/vendors/mdi/css/materialdesignicons.min.css";
+import "assets/vendors/base/vendor.bundle.base.css";
 import logoImage from "assets/img/logo.jpg";
 
-const HeaderCollab = () => {
+const HeaderRh = () => {
   return (
     <div className="horizontal-menu">
       <nav className="navbar top-navbar col-lg-12 col-12 p-0">
@@ -162,36 +163,12 @@ const HeaderCollab = () => {
                 </div>
               </li>
             </ul>
-            <div className="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-              <a className="navbar-brand brand-logo" href="index.html">
-                <img
-                  src={logoImage}
-                  alt="logo"
-                  style={{ width: "50px", height: "auto" }}
-                />
-              </a>
-              <a className="navbar-brand brand-logo-mini" href="index.html">
-                <img
-                  src={logoImage}
-                  alt="logo"
-                  style={{ width: "50px", height: "auto" }}
-                />
-              </a>
-            </div>
             <ul className="navbar-nav navbar-nav-right">
               <li className="nav-item dropdown d-lg-flex d-none">
-                <button
-                  type="button"
-                  className="btn btn-custom-green btn-sm"
-                >
-                  Product
-                </button>
-              </li>
-              <li className="nav-item dropdown d-lg-flex d-none">
-                <a className="dropdown-toggle show-dropdown-arrow btn btn-custom-green btn-sm" id="nreportDropdown" href="#" data-bs-toggle="dropdown" > {" "}  Reports
+                <a className="dropdown-toggle show-dropdown-arrow btn btn-inverse-primary btn-sm" id="nreportDropdown" href="#" data-bs-toggle="dropdown" > {" "}  Exportation
                 </a>
                 <div className="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="nreportDropdown" >
-                  <p className="mb-0 font-weight-medium float-left dropdown-header"> Reports </p>
+                  <p className="mb-0 font-weight-medium float-left dropdown-header"> Exportation </p>
                   <a className="dropdown-item" href="#">
                     <i className="mdi mdi-file-pdf text-primary"></i> Pdf
                   </a>
@@ -203,9 +180,9 @@ const HeaderCollab = () => {
               <li className="nav-item dropdown d-lg-flex d-none">
                 <button
                   type="button"
-                  className="btn btn-custom-green btn-sm"
+                  className="btn btn-inverse-primary btn-sm"
                 >
-                  Settings
+                  Paramètres
                 </button>
               </li>
               <li className="nav-item nav-profile dropdown">
@@ -220,15 +197,24 @@ const HeaderCollab = () => {
                     <i className="mdi mdi-logout text-primary"></i> Logout
                   </a>
                 </div>
-              </li>
-            </ul>
-            <button
-              className="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
-              type="button"
-              data-toggle="horizontal-menu-toggle"
-            >
-              <span className="mdi mdi-menu"></span>
-            </button>
+              </li> 
+              <div className="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+              <a className="navbar-brand brand-logo" href="index.html">
+                <img
+                  src={logoImage}
+                  alt="logo"
+                  style={{ width: "80px", height: "auto" }}
+                />
+              </a>
+              <a className="navbar-brand brand-logo-mini" href="index.html">
+                <img
+                  src={logoImage}
+                  alt="logo"
+                  style={{ width: "50px", height: "auto" }}
+                />
+              </a>
+              </div>
+          </ul>
           </div>
         </div>
       </nav>
@@ -237,34 +223,14 @@ const HeaderCollab = () => {
           <ul className="nav page-navigation">
             <li className="nav-item">
               <a className="nav-link" href="index.html">
-                <i className="mdi mdi-file-document-box menu-icon"></i>
+                <i className="mdi mdi-view-dashboard menu-icon"></i>
                 <span className="menu-title">Tableau de bord</span>
               </a>
             </li>
             <li class="nav-item">
-                  <a href="docs/documentation.html" class="nav-link">
+                  <Link className="nav-link" to="">
                     <i class="mdi mdi-file-document-box-outline menu-icon"></i>
-                    <span class="menu-title">évaluation</span></a>
-            </li>
-            <li className="nav-item">
-              <a href="#" className="nav-link">
-                <i className="mdi mdi-file-document menu-icon"></i>
-                <span className="menu-title">Fiche d'évaluation</span>
-                <i className="menu-arrow"></i>
-              </a>
-              <div className="submenu">
-                <ul>
-                  <li className="nav-item">
-                    <a className="nav-link" href="pages/ui-features/buttons.html" > Nouvelle formulaire </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="pages/ui-features/dropdowns.html" > Dropdowns </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="pages/ui-features/typography.html" > Typography </a>
-                  </li>
-                </ul>
-              </div>
+                    <span class="menu-title">évaluation</span> </Link>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
@@ -275,9 +241,7 @@ const HeaderCollab = () => {
               <div className="submenu">
                 <ul>
                   <li className="nav-item">
-                    <a className="nav-link" href="pages/forms/basic_elements.html" >
-                      Form Elements
-                    </a>
+                    <a className="nav-link" href="pages/forms/basic_elements.html" > Fiches d'évaluations </a>
                   </li>
                 </ul>
               </div>
@@ -288,4 +252,4 @@ const HeaderCollab = () => {
     </div>
   );
 };
-export default HeaderCollab;
+export default HeaderRh;

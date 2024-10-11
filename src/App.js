@@ -17,7 +17,7 @@ import Service from './views/Dashboard/rh/parametre/service/Liste';
 
 
 import Collaborateur from "./views/Dashboard/collaborateur/Home";
-import MatriceCadre from './views/Dashboard/rh/formualire/cadre/MatriceCadre';
+import MatriceCadre from './views/Dashboard/rh/formualire/cadre/Header';
 
 import Superieur from "./views/Dashboard/superieur/Home";
 

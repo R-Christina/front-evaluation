@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import "../../assets/css/style.css";
-import "../../assets/vendors/mdi/css/materialdesignicons.min.css";
-import "../../assets/vendors/base/vendor.bundle.base.css";
+import "assets/css/style.css";
+import "assets/vendors/mdi/css/materialdesignicons.min.css";
+import "assets/vendors/base/vendor.bundle.base.css";
 import logoImage from "assets/img/logo.jpg";
 
 const HeaderRh = () => {
@@ -165,9 +165,9 @@ const HeaderRh = () => {
             </ul>
             <ul className="navbar-nav navbar-nav-right">
               <li className="nav-item dropdown d-lg-flex d-none">
-                  <a className="dropdown-toggle show-dropdown-arrow btn btn-inverse-primary btn-sm" id="nreportDropdown" href="#" data-bs-toggle="dropdown" > {" "}  Paramètre
+                  <a className="dropdown-toggle show-dropdown-arrow btn btn-inverse-primary btn-sm" id="parametre" data-bs-toggle="dropdown" > {" "}  Paramètre
                   </a>
-                  <div className="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="nreportDropdown" >
+                  <div className="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="parametre" >
                     <p className="mb-0 font-weight-medium float-left dropdown-header"> Paramètre </p>
                     <a className="dropdown-item" href="/rh/parametre/dir">
                       <i className="mdi mdi-view-agenda text-primary"></i> Direction 

@@ -32,7 +32,10 @@ const Liste = () => {
   // Fonction pour filtrer les collaborateurs en fonction de la recherche
   const filteredCollaborateurs = collaborateurs.filter(collab => 
     collab.EmpNom.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    collab.Matricule.toString().includes(searchTerm.toLowerCase())
+    collab.Matricule.toString().includes(searchTerm.toLowerCase()) ||
+    collab.DirNom.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    collab.DeptNom.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    collab.ServiceNom.toLowerCase().includes(searchTerm.toLowerCase())
   );
   
 
